@@ -39,9 +39,8 @@ nav {
 
 }
 
-.logo {
-    width: 60px;
-    height: 50px;
+header nav div {
+    display: flex ;
 }
 
 .nav-title {
@@ -106,11 +105,21 @@ nav a {
 }
 
 .search-container input {
-    background: #FFF;
+    background: url('../images/Frame.svg') #FFF;
+    background-repeat: no-repeat;
+    background-position: 230px;
     border-radius: 8px;
     border: none;
     padding: 15px 35px;
+
 }
+
+.find-btn {
+    background: url('../images/Frame\ \(copy\).svg') #FF5400;
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
 
 /* tour section */
 .tours-container {
