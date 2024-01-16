@@ -169,29 +169,22 @@ main {
     text-align: center;
     margin: 100px 135px;
 }
-width: 1170px;
-height: 500px;
+
 .row1 {
     display: flex;
     justify-content: center;
-    max-width: 100%;
-    height: auto;
     gap: 5px;
 }
 
 .row2 {
     display: flex;
     justify-content: center;
-    max-width: 100%;
-    height: auto;
     gap: 5px;
 }
 
 .row3 {
     display: flex;
     justify-content: center;
-    max-width: 100%;
-    height: auto;
     gap: 5px;
 }
 
@@ -319,7 +312,6 @@ height: 500px;
 
 .newsletter-container {
     margin: 150px 135px;
-    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
