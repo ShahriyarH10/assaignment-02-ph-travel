@@ -21,13 +21,13 @@
     color: #FFF;
     text-align: center;
     font-family: Mulish;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     padding: 15px 35px;
 }
 
 .title-font{
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 800;
 }
 
@@ -51,7 +51,7 @@ header nav div {
 .nav-title {
     color: #131318;
     font-family: Mulish;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 800;
 }
 
@@ -94,7 +94,7 @@ main {
 
 .banner-title {
     font-family: Mulish;
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: 800;
     color: #FFF;
     padding: 40px;
@@ -103,7 +103,7 @@ main {
 .banner-desrip{
     text-align: center;
     font-family: Mulish;
-    font-size: 16px;;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 26px; /* 162.5% */
     color: #FFF;
@@ -149,12 +149,12 @@ main {
 
 .tours-title {
     font-weight: 800;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .tours-descrip {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .tours-img {
@@ -167,7 +167,6 @@ main {
     text-align: center;
     margin: 100px 135px;
 }
-
 
 .row1 {
     display: flex;
@@ -200,7 +199,7 @@ main {
     text-align: center;
     top: 200px;
     font-weight: 800;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 
@@ -211,7 +210,7 @@ main {
 }
 
 .why-choose-container-section h3 {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 800;
     text-align: center;
 }
@@ -246,6 +245,8 @@ main {
     border: 1px solid rgba(233, 68, 68, 0.20);
     background: rgba(233, 68, 68, 0.05);
     padding: 30px;
+    position: relative;
+    left: 300px;
     
 }
 
@@ -270,7 +271,9 @@ main {
 
 .newsletter-container {
     margin: 150px 135px;
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
@@ -298,11 +301,10 @@ main {
     width: 324px;
     height: 120px;
     padding: 10px;
-    top: 500px;
-    left: 200px;
+    top: -200px;
+    left: 300px;
     text-align: center;
     position: relative;
-
     transform: rotate(-19.628deg);
 }
 
@@ -336,28 +338,25 @@ footer > hr {
 /* responsive web layout styles */
 
 @media screen and (max-width: 600px) {
-    body{
-        margin: auto;
-        width: 90%;
+    .responsive {
+        width: 100%;
+        height: auto;
     }
 
     header {
-        flex-direction: column;
-        margin-left: -100px;
+        padding-bottom: 50px;
     }
-
-    .title-font {
-        font-size: 20px;
+    .logo-title {
+        position: relative;
+        left: -100px;
     }
-
     .nav-title {
+        display: inline;
+        justify-items: center;
         font-size: 20px;
-        padding-right: 200px;
+        padding-right: 100px;
     }
 
-    .logo {
-        height: 10px;
-    }
     .nav-hide {
         display: none;
     }
@@ -369,9 +368,9 @@ footer > hr {
     nav li .dropdown {
         display: none;
         position: absolute;
-        background-color: transparent;
+        background-color: #FFF;
         padding-left: 10px;
-        justify-content: space-between;
+        /* justify-content: space-between; */
     }
     
     nav li:hover > .dropdown {
@@ -384,12 +383,12 @@ footer > hr {
         margin: 0px;
     }
     .banner-title {
-        font-size: medium;
+        font-size: 1.5rem;
         padding: 30px;
     }
 
     .banner-desrip {
-        padding: 5px;
+        padding: 0px;
     }
 
     .search-container {
@@ -399,16 +398,17 @@ footer > hr {
     .tours-container {
         flex-direction: column;
         margin: 0px;
+        /* padding: 0px; */
        
     }
     .tours-title {
-        padding-right: 10px;
+        padding: 0px;
     }
 
     .tours-img {
-        width: 100%;
-        /* height: auto; */
-        margin-bottom: 50px;
+        /* width: 100%;
+        height: auto; */
+        /* margin-bottom: 50px; */
     }
 
     .destination-container {
@@ -421,8 +421,8 @@ footer > hr {
         height: auto;
     }
 
-    .why-choose-container-section {
-        /* padding-left: 10px 1px; */
+    .why-choose-container {
+        margin: 0px;
     }
 
     .why-choose-container-card {
@@ -432,6 +432,7 @@ footer > hr {
 
     .pp-section {
         flex-direction: column;
+        margin: 0px;
 
     }
 
@@ -439,18 +440,35 @@ footer > hr {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .card3 {
+        /* position: relative; */
+        left: 0px;
+    }
+
     .why-choose-container-card {
         width: 100%;
     }
 
     .newsletter-container {
-        flex-direction: column;
+        /* flex-direction: column; */
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
         margin: 0px;
     }
 
     .newsletter-content {
-        width: 375px;
-        height: 400px;
+        width: 430px;
+        height: auto;
+    }
+    /* .pp-section-img {
+        width: 335px;
+        height: 300px;
+    } */
+    .save-up-to-70{
+        top: -220px;
+        left: 140px;
+        width: 300px;
+        height: 100px;
     }
 
     .footer-copy {
